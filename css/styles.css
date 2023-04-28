@@ -595,7 +595,11 @@ img {
 }
 
 /* -----------------------MODAL FORM-------------------------- */
-.modal-form {}
+.modal-form {
+    padding-top: 72px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
 
 /* ---------------PORTFOLIO PAGE--------------------------- */
 /* ---------LIST OF BUTTONS------------------- */
