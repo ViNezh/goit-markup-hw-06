@@ -414,15 +414,20 @@
             </svg>
           </button>
           <form class="modal-form">
-            <strong>Leave your contacts and we will call you back</strong>
-            <label for="name"> Name</label>
-            <input type="text" id="name" />
-            <label for="phone"> Phone</label>
-            <input type="tel" id="phone" />
-            <label for="email"> Email</label>
-            <input type="email" id="email" />
+            <strong class="input-text">Leave your contacts and we will call you back</strong>
+            <label for="name" class="label-input-name"> Name</label>
+            <input type="text" id="name" class="input-text-name" />
+            <label for="phone" class="label-input-phone"> Phone</label>
+            <input type="tel" id="phone" class="input-text-phone" />
+            <label for="email" class="label-input-email"> Email</label>
+            <input type="email" id="email" class="input-text-email" />
             <label for="comment"> Comment</label>
-            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Text input"
+              class="text-area"
+            ></textarea>
           </form>
         </div>
       </div>
