@@ -544,7 +544,7 @@ img {
     transform: translate(-50%, -50%) rotate(0) scale(1);
     opacity: 1;
 
-    min-width: 408px;
+    width: 408px;
     min-height: 584px;
 
     background-color: var(--modal-bgc);
@@ -593,6 +593,9 @@ img {
 .modal-close-icon {
     fill: currentColor;
 }
+
+/* -----------------------MODAL FORM-------------------------- */
+.modal-form {}
 
 /* ---------------PORTFOLIO PAGE--------------------------- */
 /* ---------LIST OF BUTTONS------------------- */
