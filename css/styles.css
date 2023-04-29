@@ -534,7 +534,6 @@ img {
     visibility: hidden;
     pointer-events: none;
     transition-delay: 250ms;
-
 }
 
 .modal {
@@ -595,15 +594,16 @@ img {
 }
 
 /* -----------------------MODAL FORM-------------------------- */
+
 .modal-form {
     padding-top: 72px;
     padding-left: 24px;
     padding-right: 24px;
 }
 
-.input-text {
+.form-title {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 
     font-weight: 500;
     font-size: 16px;
@@ -613,28 +613,36 @@ img {
     color: var(--hero-background);
 }
 
-.label-input-name {
+.form-label {
+    display: inline-block;
+    margin-bottom: 4px;
+
     font-size: 12px;
     line-height: 14px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.04em;
     color: var(--subtle-text-color);
 }
 
-.input-text-name {
-    width: 100%;
-    margin-bottom: 8px;
+.form-field {
+    position: relative;
 }
 
-.input-text-phone {
+.form-input {
     width: 100%;
+    height: 40px;
     margin-bottom: 8px;
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    outline: 1px solid transparent;
 }
 
-.input-text-email {
-    width: 100%;
-    margin-bottom: 8px;
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 19px;
+    transform: translateY(-75%);
 }
-
 
 .text-area {
     width: 100%;
