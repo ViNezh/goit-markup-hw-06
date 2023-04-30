@@ -417,7 +417,7 @@
 
           <!-----------------MODAL FORM------------------------------  -->
 
-          <form class="modal-form">
+          <form class="modal-form" autocomplete="off">
             <strong class="form-title">Leave your contacts and we will call you back</strong>
             <label for="name" class="form-label"> Name</label>
             <div class="form-field">
@@ -426,6 +426,7 @@
                 id="user_name"
                 required
                 pattern="^[a-zA-Zа-яА-ЯіІїЇ]+$"
+                minlength="2"
                 class="form-input"
               />
               <svg class="form-icon" width="12" height="12">
@@ -433,7 +434,7 @@
               </svg>
             </div>
 
-            <label for="phone" class="form-label"> Phone</label>
+            <label for="phone" class="form-label">Phone</label>
             <div class="form-field">
               <input
                 type="tel"
@@ -447,21 +448,27 @@
                 <use href="./images/icon.svg#icon-phone"></use>
               </svg>
             </div>
-            <label for="email" class="form-label"> Email</label>
+            <label for="email" class="form-label">Email</label>
             <div class="form-field">
               <input type="email" id="email" required class="form-input" />
               <svg class="form-icon" width="15" height="12">
                 <use href="./images/icon.svg#icon-email"></use>
               </svg>
             </div>
-            <label for="comment" class="form-label"> Comment</label>
+            <label for="comment" class="form-label">Comment</label>
             <textarea
               name="comment"
               id="comment"
               placeholder="Text input"
               class="text-area"
             ></textarea>
-            <button type="submit">Send</button>
+            <label class="form-agreement">
+              <input type="checkbox" name="user_agreement" class="form-agreement-input">
+              <span class="form-agreement-text">
+                I accept the terms and conditions of the 
+                <a href="" class="form-agreement-link">Privacy Policy</a>
+              </span></input></label>
+            <button type="submit" class="submit-btn">Send</button>
           </form>
         </div>
       </div>

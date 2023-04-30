@@ -631,164 +631,237 @@ img {
     width: 100%;
     height: 40px;
     margin-bottom: 8px;
+    padding-left: 38px;
 
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     outline: 1px solid transparent;
+    transition: outline var(--duration-timing-func);
 }
 
 .form-icon {
     position: absolute;
     top: 50%;
-    left: 19px;
+    left: 18px;
     transform: translateY(-75%);
+    fill: var(--hero-background);
+    transition: fill var(--duration-timing-func);
+}
+
+.form-input:focus {
+    outline-color: var(--primary-brand);
+}
+
+.form-input:focus+.form-icon {
+    fill: var(--primary-brand);
 }
 
 .text-area {
     width: 100%;
     height: 120px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    resize: none;
+    overflow: auto;
+
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    outline: 1px solid transparent;
+    transition: outline var(--duration-timing-func);
 
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
 }
 
+.text-area:focus {
+    outline-color: var(--primary-brand);
+}
+
 .text-area::placeholder {
     color: rgba(46, 47, 66, 0.4);
 }
 
-/* ---------------PORTFOLIO PAGE--------------------------- */
-/* ---------LIST OF BUTTONS------------------- */
-
-.section-p {
-    padding-top: 96px;
-    padding-bottom: 120px;
-}
-
-.filter-list {
+.form-agreement {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 24px;
-    margin-bottom: 72px;
+    gap: 8px;
+    margin-bottom: 16px;
 }
 
-/* --------------BUTTONS------------------- */
+.form-agreement-input {}
 
-.filter-button {
-    padding: 12px 24px;
+.form-agreement-text {
+    font-size: 12px;
+    line-height: 1.17px;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text-color);
+}
 
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
+.form-agreement-link {
     color: var(--primary-brand);
-    background-color: var(--light-mode);
-    transition: color var(--duration-timing-func), background-color var(--duration-timing-func),
-        box-shadow var(--duration-timing-func), border var(--duration-timing-func);
+}
+
+.submit-btn {
+    display: block;
+
+    cursor: pointer;
+    margin: 0 auto;
 
     font-family: 'Roboto', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-}
 
-.filter-button:hover,
-.filter-button:focus {
-    background-color: var(--pressed-state);
-    border: 1px solid transparent;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--main-bg-color);
-    cursor: pointer;
-}
-
-/* --------------/BUTTONS------------------- */
-/* ---------------LIST OF EXAMPLES---------- */
-
-.examples {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
-}
-
-.item-examples {
-    max-width: calc((100%-2 * 24px) / 3);
-}
-
-.examples-link {
-    display: block;
-    transition: border-color var(--duration-timing-func), box-shadow var(--duration-timing-func);
-}
-
-.examples-link:hover,
-.examples-link:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-color: var(--light-mode);
-}
-
-/* ----------OVERLAY-------- */
-.overlay {
-    position: relative;
-    overflow: hidden;
-}
-
-.text-overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow: auto;
-    transform: translate(0, 100%);
-    transition: transform var(--duration-timing-func);
-
-    width: 100%;
-    height: 100%;
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-bottom: 164px;
-
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--secondary-bg-color);
     background-color: var(--primary-brand);
+    transition: background-color var(--duration-timing-func);
+
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0px;
+    padding: 16px 32px;
+    min-width: 169px;
 }
 
-.examples-link:hover .text-overlay,
-.examples-link:focus .text-overlay {
-    transform: translate(0, 0%);
-}
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: var(--pressed-state);
 
-/* ------------DESIGN FOR BOTTOM SIDE OF CARD------ */
+    /* ---------------PORTFOLIO PAGE--------------------------- */
+    /* ---------LIST OF BUTTONS------------------- */
 
-.card-sign {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 16px;
-    border: 1px solid var(--accent-color);
-    border-top: none;
-    width: 360px;
+    .section-p {
+        padding-top: 96px;
+        padding-bottom: 120px;
+    }
 
-    transition: border-color var(--duration-timing-func);
-}
+    .filter-list {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 72px;
+    }
 
-.examples-link:hover .card-sign,
-.examples-link:focus .card-sign {
-    border-color: transparent;
-}
+    /* --------------BUTTONS------------------- */
 
-.example-description {
-    margin-bottom: 8px;
+    .filter-button {
+        padding: 12px 24px;
 
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--title-text-color);
-}
+        border: 1px solid var(--accent-color);
+        border-radius: 4px;
+        color: var(--primary-brand);
+        background-color: var(--light-mode);
+        transition: color var(--duration-timing-func), background-color var(--duration-timing-func),
+            box-shadow var(--duration-timing-func), border var(--duration-timing-func);
 
-.card-sign .section-text {
-    color: var(--main-text-color);
-}
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+    }
+
+    .filter-button:hover,
+    .filter-button:focus {
+        background-color: var(--pressed-state);
+        border: 1px solid transparent;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+        color: var(--main-bg-color);
+        cursor: pointer;
+    }
+
+    /* --------------/BUTTONS------------------- */
+    /* ---------------LIST OF EXAMPLES---------- */
+
+    .examples {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+    }
+
+    .item-examples {
+        max-width: calc((100%-2 * 24px) / 3);
+    }
+
+    .examples-link {
+        display: block;
+        transition: border-color var(--duration-timing-func), box-shadow var(--duration-timing-func);
+    }
+
+    .examples-link:hover,
+    .examples-link:focus {
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-color: var(--light-mode);
+    }
+
+    /* ----------OVERLAY-------- */
+    .overlay {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .text-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: auto;
+        transform: translate(0, 100%);
+        transition: transform var(--duration-timing-func);
+
+        width: 100%;
+        height: 100%;
+        padding-top: 40px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 164px;
+
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--secondary-bg-color);
+        background-color: var(--primary-brand);
+    }
+
+    .examples-link:hover .text-overlay,
+    .examples-link:focus .text-overlay {
+        transform: translate(0, 0%);
+    }
+
+    /* ------------DESIGN FOR BOTTOM SIDE OF CARD------ */
+
+    .card-sign {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 16px;
+        border: 1px solid var(--accent-color);
+        border-top: none;
+        width: 360px;
+
+        transition: border-color var(--duration-timing-func);
+    }
+
+    .examples-link:hover .card-sign,
+    .examples-link:focus .card-sign {
+        border-color: transparent;
+    }
+
+    .example-description {
+        margin-bottom: 8px;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: var(--title-text-color);
+    }
+
+    .card-sign .section-text {
+        color: var(--main-text-color);
+    }
