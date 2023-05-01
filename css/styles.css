@@ -533,6 +533,7 @@ img {
 .subscribe-input {
     display: block;
     width: 264px;
+    height: 40px;
     padding: 8px 16px;
 
     background-color: var(--hero-background);
@@ -549,13 +550,15 @@ img {
     color: var(--main-bg-color);
 }
 
+/* -----------SUBSCRIBE BUTTON----------- */
 .subscribe-btn {
     display: flex;
     width: 165px;
+    height: 40px;
     padding: 0;
     justify-content: center;
+    align-items: center;
     gap: 16px;
-    width: 165px;
 
     cursor: pointer;
     margin: 0 auto;
@@ -683,7 +686,7 @@ img {
 
 /* -----------------------MODAL FORM-------------------------- */
 
-.modal-form {
+.modal {
     padding-top: 72px;
     padding-left: 24px;
     padding-right: 24px;
@@ -726,7 +729,7 @@ img {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     outline: 1px solid transparent;
-    transition: outline var(--duration-timing-func);
+    transition: outline var(--duration-timing-func), border var(--duration-timing-func);
 }
 
 .form-icon {
@@ -740,6 +743,7 @@ img {
 
 .form-input:focus {
     outline-color: var(--primary-brand);
+    border: transparent;
 }
 
 .form-input:focus+.form-icon {
@@ -759,7 +763,7 @@ img {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     outline: 1px solid transparent;
-    transition: outline var(--duration-timing-func);
+    transition: outline var(--duration-timing-func), border var(--duration-timing-func);
 
     font-size: 12px;
     line-height: 1.17;
@@ -768,6 +772,7 @@ img {
 
 .text-area:focus {
     outline-color: var(--primary-brand);
+    border: transparent;
 }
 
 .text-area::placeholder {
@@ -781,6 +786,7 @@ img {
     justify-content: flex-start;
     margin-bottom: 24px;
     margin-top: 0;
+    cursor: pointer;
 }
 
 .form-agreement-input {
