@@ -403,11 +403,22 @@
               </li>
             </ul>
           </div>
+          <div class="footer_subscribe">
+            <p class="subscribe-text">Subscribe</p>
+            <form class="form-subscribe">
+            <input type="email" required placeholder="Email" class="subscribe-input"/>
+            <button type="submit" class="subscribe-btn"> <span class="subscribe-btn-descr">Subscribe</span>
+              <span class="subscribe-btn-icon"><svg class="subscribe-icon" width="24" height="20">
+                <use href="./images/icon.svg#icon-subscribe"></use>
+              </svg></span>
+            </button>
+          </form>
+          </div>
         </div>
       </footer>
       <!--------------------MODAL WINDOW-------------- -->
       <!-- ------------------CLOSE BUTTON-------------- -->
-      <div class="backdrop" data-modal>
+      <div class="backdrop is-hidden"  data-modal>
         <div class="modal">
           <button type="button" class="modal-close" data-modal-close>
             <svg class="modal-close-icon" width="8" height="8">
@@ -419,7 +430,7 @@
 
           <form class="modal-form" autocomplete="off">
             <strong class="form-title">Leave your contacts and we will call you back</strong>
-            <label for="name" class="form-label"> Name</label>
+            <label for="user_name" class="form-label"> Name</label>
             <div class="form-field">
               <input
                 type="text"
@@ -434,11 +445,11 @@
               </svg>
             </div>
 
-            <label for="phone" class="form-label">Phone</label>
+            <label for="user_phone" class="form-label">Phone</label>
             <div class="form-field">
               <input
                 type="tel"
-                id="phone"
+                id="user_phone"
                 required
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
                 title="xxx-xxx-xx-xx"
@@ -448,22 +459,26 @@
                 <use href="./images/icon.svg#icon-phone"></use>
               </svg>
             </div>
-            <label for="email" class="form-label">Email</label>
+            <label for="user_email" class="form-label">Email</label>
             <div class="form-field">
-              <input type="email" id="email" required class="form-input" />
+              <input type="email" id="user_email" required class="form-input" />
               <svg class="form-icon" width="15" height="12">
                 <use href="./images/icon.svg#icon-email"></use>
               </svg>
             </div>
-            <label for="comment" class="form-label">Comment</label>
+            <label for="user_comment" class="form-label">Comment</label>
             <textarea
               name="comment"
-              id="comment"
+              id="user_comment"
               placeholder="Text input"
               class="text-area"
             ></textarea>
             <label class="form-agreement">
               <input type="checkbox" name="user_agreement" class="form-agreement-input">
+              <svg class="agreement-icon" width="16" height="16">
+                <use href="./images/icon.svg#icon-unchecked" class="agreement-icon-unchecked"></use>
+                <use href="./images/icon.svg#icon-checked" class="agreement-icon-checked"></use>
+              </svg>
               <span class="form-agreement-text">
                 I accept the terms and conditions of the 
                 <a href="" class="form-agreement-link">Privacy Policy</a>
@@ -476,4 +491,4 @@
     <script src="./js/modal.js"></script>
   </body>
 </html>
-is-hidden
+
