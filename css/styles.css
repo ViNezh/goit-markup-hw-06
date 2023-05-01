@@ -689,6 +689,7 @@ img {
     padding-right: 24px;
 }
 
+/* ----------------TEXT OF MODAL WINDOW--------------- */
 .form-title {
     display: block;
     margin-bottom: 16px;
@@ -711,6 +712,7 @@ img {
     color: var(--subtle-text-color);
 }
 
+/* ----------------FIELDS INPUT FORM----------- */
 .form-field {
     position: relative;
 }
@@ -744,6 +746,7 @@ img {
     fill: var(--primary-brand);
 }
 
+/* ----------------------TEXT AREA OF FORM------------- */
 .text-area {
     display: block;
     width: 100%;
@@ -771,6 +774,7 @@ img {
     color: rgba(46, 47, 66, 0.4);
 }
 
+/* ---------------USER AGREEMENT------------------ */
 .form-agreement {
     display: flex;
     align-items: center;
