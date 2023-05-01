@@ -807,13 +807,15 @@ img {
 }
 
 .form-agreement-text {
+    display: inline-block;
     font-size: 12px;
-    line-height: 1.17px;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--subtle-text-color);
 }
 
 .form-agreement-link {
+    display: inline-block;
     color: var(--primary-brand);
     transition: color var(--duration-timing-func);
 }
